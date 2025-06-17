@@ -17,6 +17,10 @@ PASSWORD2 = 'aive swol azfs jizr'
 EMAIL3 = 'jianjai9@gmail.com'
 PASSWORD3 = 'cqwm nysh vfob rjhk'
 
+EMAIL4 = 'rjbringston@gmail.com'
+PASSWORD4 = 'ytoo mapc yenw twxw'
+
+
 
 IMAP_SERVER = 'imap.gmail.com'
 
@@ -112,6 +116,9 @@ def buscar():
       # Si no encuentra en la primera, intenta en la segunda
     if not resultado:
         resultado = buscar_correo(EMAIL3, PASSWORD3, correo)
+
+    if not resultado:
+        resultado = buscar_correo(EMAIL4, PASSWORD4, correo)
 
     if not resultado:
         return jsonify({'success': False, 'message': f'No se encontraron correos para {correo}.'})
